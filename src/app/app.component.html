@@ -1,3 +1,7 @@
 <ion-app>
+    <div class="videoWrapper">
+        <video id="background-video" preload playsinline loop muted autoplay *ngIf="(bgVideo$ | async) as video" [src]="video" (loadstart)="videoLoaded()">
+        </video>
+    </div>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
